@@ -1,9 +1,18 @@
 <h1><%= @place.name %></h1>
 <h2><%= @place.address %></h2>
 <h3>Notes:</h3>
-<p>
-  <%= @place.notes %>
-</p>
+  <p>
+    <%= @place.notes %>
+  </p>
+  <p>
+    <%= link_to "Edit", edit_place_path(@place) %>
+  </p>
+  <p>
+    <%= link_to "Delete", place_path(@place),
+                          :data => {:confirm => "Are you sure",
+                          :method => "delete"}%>
+  </p>
+
 
 <p>
   <%= link_to "Return to places", places_path %>
