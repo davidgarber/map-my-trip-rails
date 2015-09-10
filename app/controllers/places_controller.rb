@@ -1,6 +1,10 @@
 class PlacesController < ApplicationController
   def index
     @places = Place.all
+    @hash = Gmaps4rails.build_markers(@places) do |place, marker|
+      marker.lat place.latitude
+      marker.lng place.longitude
+    end
   end
 
   def show
@@ -38,7 +42,7 @@ class PlacesController < ApplicationController
     @place.destroy
     redirect_to places_path
   end
-  
+
   private
 
   def place_params
