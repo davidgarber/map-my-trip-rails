@@ -8,6 +8,8 @@ gem 'coffee-rails'
 gem 'jquery-rails'
 gem 'turbolinks'
 gem 'sqlite3'
+gem 'google-api-client', '0.9.pre3'
+gem 'gmaps4rails'
 
 group :development do
   gem 'byebug'
