@@ -1,4 +1,9 @@
 <h1><%= @place.name %></h1>
+<h2><%= @place.address %></h2>
+<h3>Notes:</h3>
+<p>
+  <%= @place.notes %>
+</p>
 
 <p>
   <%= link_to "Return to places", places_path %>
